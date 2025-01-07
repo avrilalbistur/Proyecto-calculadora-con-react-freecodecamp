@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../css/Boton.css'
 function Boton(props){
 
     // Función para determinar si el valor es un operador o no.
@@ -8,7 +8,7 @@ function Boton(props){
     };
 
     return(
-        <div className={`boton-contenedor ${esOperador(props.children) ? 'operador' : null}`}>
+        <div className={`boton-contenedor ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()}>
             {props.children}
         </div>
     )
